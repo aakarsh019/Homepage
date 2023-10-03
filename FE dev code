@@ -1,0 +1,530 @@
+<script>
+   function addRecommendation() {
+  // Get the message of the new recommendation
+  let recommendation = document.getElementById("new_recommendation");
+  // If the user has left a recommendation, display a pop-up
+  if (recommendation.value != null && recommendation.value.trim() != "") {
+    console.log("New recommendation added");
+    //Call showPopup here
+    showPopup(true);
+
+    // Create a new 'recommendation' element and set it's value to the user's message
+    var element = document.createElement("div");
+    element.setAttribute("class","recommendation");
+    element.innerHTML = "\<span\>&#8220;\</span\>" + recommendation.value + "\<span\>&#8221;\</span\>";
+    // Add this element to the end of the list of recommendations
+    document.getElementById("all_recommendations").appendChild(element); 
+    
+    // Reset the value of the textarea
+    recommendation.value = "";
+  }
+}
+
+function showPopup(bool) {
+  if (bool) {
+    document.getElementById('popup').style.visibility = 'visible'
+  } else {
+    document.getElementById('popup').style.visibility = 'hidden'
+  }
+}
+</script>
+<html>
+  <head>
+    <title>Aakarsh - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Halcyon
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          halcyon.hy@gmail.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +13456764598
+
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://e0.pxfuel.com/wallpapers/487/966/desktop-wallpaper-kaneki-ken-chibi-tokyo-ghoul-chibi.jpg" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Halcyon! <img src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" width="60px"/>
+          </h1>
+          <p>
+            An Enthusiastic, Optimistic, and Hard-Working Individual. Extremely motivated to constantly hone my skills and grow
+            professionally. Proficient in English, Hindi, and German
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>2 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png"/>
+            <h6>Java</h6>
+            <p>Advanced Level</p>
+        </div>
+        <div class="skill">
+            <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/matlab_macos_bigsur_icon_189993.png"/>
+            <h6>Matlab</h6>
+            <p>Advanced Level</p>
+        </div>
+        <div class="skill">
+            <img src="data:image/jpeg;base64,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"/>
+            <h6>Python</h6>
+            <p>Advanced Level</p>
+        </div>
+
+
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="project-card" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>Gallery Applet</h3>
+            <ul>
+              <li>Developed a gallery applet using Java. </li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Educative Applet</h3>
+            <ul>
+              <li>Developed an educative applet for students in schools.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>School Final batch Website</h3>
+            <ul>
+              <li>Created a website for our final batch in school</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="recommendation" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Halcyon is a keen learner and works very well with the team.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+           It was a wonderful experience working together and would love to work again.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          He is a wonderful asset to have for any organization.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+      </a>
+    </div>
+
+    <div class="popup flex_center" id="popup">
+        
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>Thanks for leaving a recommendation</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
+<style>
+    body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Navigation Bar */
+
+#home {
+  background-color:  #7600bc;
+  padding-bottom: 1cm;
+  margin-left:-1cm;
+  margin-right:-1cm;
+  margin-top:-1cm;
+  padding-top: 2cm;
+  padding-bottom: 2cm;
+  height: 5mm;
+ }
+
+.topmenu {
+  color: lightgray;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration:none;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.topdiv {
+  float: right;
+  padding-right: 1cm;
+}
+
+.profile_name {
+  float: left;
+  padding-left: 2cm;
+  color:chartreuse;
+  font-size: 30px;
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width:25px;
+  margin-right: 10px;
+  float:left;
+}
+
+/* Titles */
+
+h2 {
+  text-align: justify;
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  color: #7600bc;
+  margin: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.introduction {
+  text-align: justify;
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation-duration: 5s;
+  position: relative;
+}
+
+/* Used in the About Me sections */
+
+.container {
+  display: flex;
+}
+
+/* About Me */
+
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+#about-me h1 {
+  font-size: 65px;
+  margin-top: 90px;
+  color: #7600bc;
+}
+
+#about-me p {
+  font-size: 25px;
+  color: rgb(128, 128, 128);
+  margin-top: -1cm;
+}
+
+.profile_image {
+  width: 550px;
+  height: fit-content;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* Skills */
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.skill {
+  border: 1px solid gray;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  height: 35px;
+  align-items: center;
+}
+
+.skills h6 {
+  align-items: center;
+  font-size: 20px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  font-weight: bold;
+} 
+
+.skills p {
+  align-items: center;
+  font-size: 15px;
+  color: gray;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+} 
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Projects */
+
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.projects-container hr {
+  border: 1px solid lightgray;
+  width: 75%;
+  margin-left: 5cm;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.project-card li {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+/* Recommendations */
+
+.all_recommendations {
+  display: flex;
+  align-items: center;
+  margin-left: 1in;
+  flex-direction: row;
+  flex-flow: wrap;
+  padding: 20px;
+}
+
+.recommendation {
+  font-style: italic;
+  text-align: left;
+  width: 21.875rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+  border:1px solid gray;
+  font-size: 18px;
+  height:150px
+}
+
+.recommendation span {
+  color: #7600bc;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Scroll to Top Button */
+
+.iconbutton{
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #7600bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+/* Form Pop-up */
+
+.popup {
+  width:400px;
+  background-color: #e8bcf0;
+  border-radius: 3mm;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  position: fixed;
+  /* padding: 30px; */
+  visibility: hidden;
+}
+
+.popup img {
+  padding-top: 20px;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  margin-left: 25%;
+}
+
+.popup button:hover {
+  background-color: #fff;
+  border: 2px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 25%;
+}
+
+/* Recommendation Form */
+
+input, textarea {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  margin: 10px;  
+  width:100%;
+}
+
+fieldset {
+  display: flexbox;
+  align-content: center;
+  justify-content: center;  
+  padding: 25px; 
+  margin-left: 50px; 
+  margin-right: 50px;   
+  border: thin solid white;
+  width: 50%;
+}
+
+/* Buttons */
+
+button {
+  background-color: #fff;
+  border: 1px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #7600bc;
+  border: 1px solid #7600bc;
+  color: #fff;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+</style>
